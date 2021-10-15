@@ -120,10 +120,13 @@
             the 16th century.
           </p>
         </div>
-        <div class="flex-1">
+        <div
+          id="uranus"
+          class="flex-1 cursor-pointer"
+          onclick="onClickUranus()"
+        >
           <h2
             class="text-xl leading-loose text-center uppercase tracking-widest"
-            onclick="showAlert()"
           >
             Uranus
           </h2>
@@ -159,8 +162,20 @@
       </div>
     </div>
     <script>
-      function showAlert() {
+      function onClickUranus() {
         alert("Hello World!");
+        document.getElementById("uranus").style.color =
+          document.getElementById("uranus").style.color === "red"
+            ? "black"
+            : "red";
+        document.getElementById("uranus").style.background =
+          document.getElementById("uranus").style.background === "yellow"
+            ? "white"
+            : "yellow";
+        document.getElementById("uranus").style.padding =
+          document.getElementById("uranus").style.padding === "3rem"
+            ? "0"
+            : "3rem";
       }
     </script>
   </body>
